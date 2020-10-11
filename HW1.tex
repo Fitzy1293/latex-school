@@ -30,9 +30,7 @@
 
 
 \numberwithin{equation}{section}
-\usepackage{empheq}
 
-\newcommand*\widefbox[1]{\fbox{\hspace{2em}#1\hspace{2em}}}
 
                                                   %────────────────┐
                                                   \begin{document}%│
@@ -42,13 +40,13 @@
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{Owen Fitzgerald - Fall 2020}
-\lhead{Class}
+\lhead{Advanced Lab}
 \rfoot{Page \thepage}
 %────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 %Homework info
 \begin{center}
-  {\LARGE\textbf{Homework Template} \\
-  {\large\emph{\textbf{Chapter x}}}
+  {\LARGE\textbf{Homework 1 - Error Analysis} \\
+  {\large\emph{\textbf{Chapter 3}}}
 \end{center}
 
 \begin{flushleft}
@@ -57,6 +55,8 @@
   {\textbf{Professor:} \emph{\texttt{Dr. Ward}} \\
   \LaTeX\textbf{ File name:} \emph{\texttt{HW\_1\_Error\_Analysis\_Owen\_Fitzgerald.tex}} \\
   \footnotesize\url{https://github.com/Fitzy1293/latex-school/blob/main/HW1.tex} \\
+  \footnotesize\url{  https://github.com/Fitzy1293/latex-school/blob/main/HW1.pdf} \\
+
 
   \noindent\makebox[\linewidth]{\rule{\linewidth}{.4pt}}
 
@@ -77,21 +77,12 @@ Comment.}\\
 
 \subsection*{\emph{Solution 3.1\\Section 3.2: The Square-Root Rule for a Counting Experiment}}
 
-
-
-\begin{flalign}
-
-
-\begin{equation}
-  student_{A\:Time}= 3 \text{ minutes} \quad student_{A\:Emitted\:3\:minutes} = 28 \text{ particles}\\
-\end{equation}
-
-\begin{equation}
-  student_{B\:Time}= 30 \text{ minutes} \quad student_{B\:Emitted\:30\:minutes} =  310 \text{ particles}\\
-\end{equation}
-
-
-\end{flalign}
+  \begin{equation}
+    student_{A\:Time}= 3 \text{ minutes} \quad student_{A\:emitted\:3\:minutes} = 28 \text{ particles}\\
+  \end{equation}
+  \begin{equation}
+    student_{B\:Time}= 30 \text{ minutes} \quad student_{B\:emitted\:30\:minutes} =  310 \text{ particles}\\
+  \end{equation}
 
 %======================================================================================================================================================
 
@@ -107,77 +98,121 @@ Comment.}\\
 
 
 \begin{equation}
-  student_{A\:Emitted\:3\:minutes} =  28 \text{ particles}\\
+  student_{A\:emitted\:3\:minutes} =  28 \text{ particles}\\
 \end{equation}
 
 \begin{equation}
-  student_{A\:Uncertainty} = \sqrt{28} \approx{5.29150262212918}   \\
+  student_{A\:uncertainty} = \sqrt{28} \approx{5.29150262212918}   \\
 \end{equation}
 
 \begin{equation}
-  student_{A\:Uncertainty} = \pm{5 \text{ particles}} \\
+  student_{A\:uncertainty} = \pm{5 \text{ particles}} \\
 \end{equation}
 
 \begin{equation}
-  \boxed { student_{A\:Emitted\:3\:minutes} =  28 \pm{5 \text{ particles}} }
+  \boxed { student_{A\:emitted\:3\:minutes} =  28 \pm{5 \text{ particles}} }
 \end{equation}
 %======================================================================================================================================================
 \emph{(b) Student B's measurement}
 \begin{equation}
-  student_{B\:Emitted\:30\:minutes} = 310 \text{ particles}\\
+  student_{B\:emitted\:30\:minutes} = 310 \text{ particles}\\
 \end{equation}
 
 \begin{equation}
-  student_{B_{\:Uncertainty} } = \sqrt{310} \approx{17.6068168616590}   \\
+  student_{B_{\:uncertainty} } = \sqrt{310} \approx{17.6068168616590}   \\
 \end{equation}
 
 \begin{equation}
-  student_{B_{\:Uncertainty} } = \pm{18 \text{ particles}} \\
+  student_{B_{\:uncertainty} } = \pm{18 \text{ particles}} \\
 \end{equation}
 
 \begin{equation}
-  \boxed { student_{B\:Emitted\:30\:minutes} = 310 \pm{18\:particles} \\ }
+  \boxed { student_{B\:emitted\:30\:minutes} = 310 \pm{18\:particles} \\ }
 \end{equation}
 
 %======================================================================================================================================================
-\begin{flushleft}
+%\begin{flushleft}
   \emph{(c) What are the fractional uncertainties? Comment, i.e interpret, the fractional uncertainties}\\
 
   Using eq .2.21 from the textbook:
-  $\emph{fractional Uncertainty} = \frac {\delta_x} {|{x_{best}}|}$
+  $\emph{fractional uncertainty} = \frac {\delta_x} {|{x_{best}}|}$
   , we can use eq. (1.11) with Students A and B.
 
   \begin{center}
   \begin{equation}
-    \emph{fractional uncertainty} = \frac {\delta_\nu} {|{\nu_{best}}|}
+    \emph{fractional uncertainty} = \frac {\delta_\nu} {|{\nu_{best}}|} = \frac { \sqrt {student_{\:particle\:count\:best} }} {student_{\:particle\:count\:best}}
   \end{equation}
   \end{center}
-\end{flushleft}
+%\end{flushleft}
 
 \begin{equation}
-  student_A_{\:fractional\:Uncertainty} = \frac {5} {28} \approx{0.178571428571429}
+  student_A_{\:fractional\:uncertainty} = \frac {5} {28} \approx{0.178571428571429}
 \end{equation}
 \begin{equation}
-  student_B_{\:fractional\:Uncertainty} = \frac {18} {310} \approx{0.0580645161290323}
+  student_B_{\:fractional\:uncertainty} = \frac {18} {310} \approx{0.0580645161290323}
 \end{equation}
-
 
 \begin{subequations}
 \begin{empheq}[box=\widefbox]{align}
-  student_A_{\:fractional\:Uncertainty} = 18\% \\
-  student_B_{\:fractional\:Uncertainty} = 6\%
+  student_A_{\:fractional\:uncertainty} = 18\% \\
+  student_B_{\:fractional\:uncertainty} = 6\%
 \end{empheq}
 \end{subequations}
 
-\begin{flushleft}
 Student B's total uncertainty is higher than student A's, however B has a lower fractional uncertainty.
 Counting more events will always reduce your fractional uncertainty in these cases.
 A lower fractional uncertainty implies a more accurate measurement, so B has a better measurement.
-\end{flushleft}
-
-%======================================================================================================================================================
 
 \noindent\makebox[\linewidth]{\rule{\linewidth}{1pt}}
-\Section{Problem 2}
+%======================================================================================================================================================
+
+\section{Problem 2}
+\emph{Most of the ideas of error analysis have important applications in many
+different fields. This applicability is especially true for the square-root rule (3.2)
+for counting experiments, as the following example illustrates. The normal average
+incidence of a certain kind of cancer has been established as 2 cases per 10,000
+people per year. The suspicion has been aired that a certain town (population
+20,000) suffers a high incidence of this cancer because of a nearby chemical dump.
+To test this claim, a reporter investigates the town's records for the past 4 years and
+finds 20 cases of the cancer. He calculates that the expected number is 16 (check
+this) and concludes that the observed rate is 25% more than expected. Is he justified
+in claiming that this result proves that the town has a higher than normal rate for
+this cancer?}\\
+
+\subsection*{\emph{Solution 3.3\\Section 3.2: Abnormal number of cancer cases?}}
+
+\begin{equation}
+  town_{expected\:cases}= 16 \quad town_{actual\:cases} = 20
+\end{equation}
+
+
+\begin{equation}
+\sqrt{town_{actual\:cases} } = \sqrt{20} \approx{4.47213595499958}
+\end{equation}
+\begin{equation}
+\sqrt{town_{actual\:cases} } = \pm{4} \text{ cases}
+\end{equation}
+The fewest possible cases are seen by substracting the uncertainty $20 - 4 = 16$.
+This is within the expected range, so he is not justified in his claim.
+
+\noindent\makebox[\linewidth]{\rule{\linewidth}{1pt}}
+%======================================================================================================================================================
+\section{Problem 3}
+\emph{The binomial theorem states - binomail theorem here.
+(a) Show that if n is a positive integer, this infinite series terminates (that is, has
+only a finite number of nonzero terms). Write the series down explicitly for the
+cases n = 2 and n = 3. (b) Write down the binomial series for the case n = -1.
+This case gives an infinite series for 1/(1 + x), but when xis small, you get a good
+approximation if you keep just the first two terms:
+- 1 - =
+1
++ X
+l -x
+'Problems for Chapter 3
+as quoted in (3.6). Calculate both sides of this approximation for each of the values
+x = 0.5, 0.1, and 0.01, and in each case find the percentage by which the approxi-
+mation (1 - x) differs from the exact value of 1/(1 + x).}
+\subsection*{\emph{Solution 3.8\\Section 3.3: Abnormal number of cancer cases?}}
+
 
 \end{document}
