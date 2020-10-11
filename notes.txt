@@ -1,9 +1,0 @@
-VIM is kind of easy to use once you get the setup right.
-
-
-
-What do we need to setup on this computer?
-	- Sage is a huge dl
-	- Become a VIM God?
-	- Actually sign up for school?
-

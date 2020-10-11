@@ -1,0 +1,95 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[english]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+
+%Reference pics from images subfolder.
+\usepackage{graphicx}
+\graphicspath{ {./images/} } %dir of embedded images, less clutter in main dir.
+
+\usepackage{lipsum}
+\usepackage[margin=20mm]{geometry} %Set margins
+\usepackage{setspace}
+\renewcommand{\baselinestretch}{1} %Change between pacing between elements.
+
+\usepackage{amsmath}
+\numberwithin{equation}{section}
+%───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+                                                  %────────────────┐
+                                                  \begin{document}%│
+                                                  %────────────────┘
+%────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+%Page header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Owen Fitzgerald - Fall 2020}
+\lhead{Class}
+\rfoot{Page \thepage}
+%────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+%Homework info
+\begin{center}
+  {\LARGE\textbf{Homework Template} \\
+  {\large\emph{\textbf{Chapter x}}}
+\end{center}
+
+\begin{flushleft}
+
+  {\textbf{Student:} \emph{\texttt{Owen Fitzgerald}} \\
+  {\textbf{Professor:} \emph{\texttt{Dr. Ward}} \\
+  \LaTeX\textbf{ Path:} \emph{\texttt{HW\_1\_Error\_Analysis\_Owen\_Fitzgerald.tex}} \\
+
+  \noindent\makebox[\linewidth]{\rule{\linewidth}{.4pt}}
+
+\end{flushleft}
+%────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+%QUESTIONS 1, 3, 8, 16, 24, 29, 31, 39, 49 a) only, and 50
+\noindent\makebox[\linewidth]{\rule{\linewidth}{1pt}}
+%────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+\section{Problem 1}
+\emph{To measure the activity of a radioactive sample, two students count the
+alpha particles it emits. Student A watches for 3 minutes and counts 28 particles;
+Student B watches for 30 minutes and counts 310 particles. (a) What should Student
+A report for the average number emitted in 3 minutes, with his uncertainty? (b)
+What should Student B report for the average number emitted in 30 minutes, with
+her uncertainty? (c) What are the fractional uncertainties in the two measurements?
+Comment.}\\
+
+\subsection*{\emph{Solution 3.1\\Section 3.2: The Square-Root Rule for a Counting Experiment}}
+
+
+
+\begin{flalign}
+
+
+\begin{equation}
+  student_{A_{ time}}= 3 \text{ minutes} = 180 \cdot s \quad student_{A_{ \text{ emission rate} }} =  \frac{28}{3} \cdot \frac{particles}{minute}\\
+\end{equation}
+
+\begin{equation}
+  student_{B_{ time}}= 3 \text{ minutes} = 180 \cdot s \quad student_{B_{ \text{ emission rate} }} =  \frac{300}{3} \cdot \frac{particles}{minute}\\
+\end{equation}
+
+\end{flalign}
+
+\emph{(a)}
+
+\begin{equation}
+  student_{A_{ \text{ Emitted in 3 minutes} }} = 28\\
+\end{equation}
+
+\begin{equation}
+  student_{A_{ \text{ uncertainty} }} = \sqrt{28} \approx{5.29150262212918...}   \\
+\end{equation}
+\begin{equation}
+  student_{A_{ \text{ uncertainty} }} = \pm{5 particles emmited} \\
+\end{equation}
+\end{flalign}
+
+
+\noindent\makebox[\linewidth]{\rule{\linewidth}{1pt}}
+
+
+
+\end{document}
