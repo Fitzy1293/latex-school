@@ -1,0 +1,317 @@
+%QUESTIONS 1, 3, 8, 16, 24, 29, 31, 39, 49 a) only, and 50
+%Start at 79
+%ANSWERS TO CHECK START ON PAGE 304
+
+\documentclass[a4paper, 12pt]{article}
+\usepackage[english]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+
+%Reference pics from images subfolder.
+\usepackage{graphicx}
+\graphicspath{ {./images/} } %dir of embedded images, less clutter in main dir.
+
+\usepackage{lipsum}
+\usepackage[margin=20mm]{geometry} %Set margins
+\usepackage{setspace}
+\renewcommand{\baselinestretch}{1} %Change between pacing between elements.
+
+\usepackage{amsmath}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+
+
+\numberwithin{equation}{section}
+\usepackage{empheq}
+\newcommand*\widefbox[1]{\fbox{\hspace{2em}#1\hspace{2em}}}
+                                                  %────────────────┐
+                                                  \begin{document}%│
+                                                  %────────────────┘
+%────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+%Page header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Owen Fitzgerald - Fall 2020}
+\lhead{Advanced Lab}
+\rfoot{Page \thepage}
+%────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+%Homework info
+\begin{center}
+  {\LARGE\textbf{Homework 1 - Error Analysis} \\
+  {\large\emph{\textbf{Chapter 3}}}
+\end{center}
+
+\begin{flushleft}
+
+  {\textbf{Student:} \emph{\texttt{Owen Fitzgerald}} \\
+  {\textbf{Professor:} \emph{\texttt{Dr. Ward}} \\
+  \LaTeX\textbf{ File name:} \emph{HW1.tex}} \\
+  \footnotesize\url{https://github.com/Fitzy1293/latex-school/blob/main/HW1.tex} \\
+  \footnotesize\url{  https://github.com/Fitzy1293/latex-school/blob/main/HW1.pdf} \\
+
+
+  \noindent\makebox[\linewidth]{\rule{\linewidth}{.4pt}}
+
+\end{flushleft}
+%────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+\noindent\makebox[\linewidth]{\rule{\linewidth}{1pt}}
+%────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+\section{Problem 1}
+\emph{To measure the activity of a radioactive sample, two students count the
+alpha particles it emits. Student A watches for 3 minutes and counts 28 particles;
+Student B watches for 30 minutes and counts 310 particles. (a) What should Student
+A report for the average number emitted in 3 minutes, with his uncertainty? (b)
+What should Student B report for the average number emitted in 30 minutes, with
+her uncertainty? (c) What are the fractional uncertainties in the two measurements?
+Comment.}\\
+
+\subsection*{\emph{Solution 3.1\\Section 3.2: The Square-Root Rule for a Counting Experiment}}
+
+  \begin{equation}
+    student_{A\:Time}= 3 \text{ minutes} \quad student_{A\:emitted\:3\:minutes} = 28 \text{ particles}\\
+  \end{equation}
+  \begin{equation}
+    student_{B\:Time}= 30 \text{ minutes} \quad student_{B\:emitted\:30\:minutes} =  310 \text{ particles}\\
+  \end{equation}
+
+%======================================================================================================================================================
+
+\begin{flushleft}
+  \emph{(a) Student A's measurement}
+
+  Using eq. 3.2 from the textbook:
+  $\emph{Avg. events measurement} = \nu \pm{\sqrt{\nu}}$
+  where
+  $\nu$
+  - the greek letter \emph{nu} - is the best average.
+\end{flushleft}
+
+
+\begin{equation}
+  student_{A\:emitted\:3\:minutes} =  28 \text{ particles}\\
+\end{equation}
+
+\begin{equation}
+  student_{A\:uncertainty} = \sqrt{28} \approx{5.29150262212918}   \\
+\end{equation}
+
+\begin{equation}
+  student_{A\:uncertainty} = \pm{5 \text{ particles}} \\
+\end{equation}
+
+\begin{equation}
+  \boxed { student_{A\:emitted\:3\:minutes} =  28 \pm{5 \text{ particles}} }
+\end{equation}
+%======================================================================================================================================================
+\emph{(b) Student B's measurement}
+\begin{equation}
+  student_{B\:emitted\:30\:minutes} = 310 \text{ particles}\\
+\end{equation}
+
+\begin{equation}
+  student_{B_{\:uncertainty} } = \sqrt{310} \approx{17.6068168616590}   \\
+\end{equation}
+
+\begin{equation}
+  student_{B_{\:uncertainty} } = \pm{18 \text{ particles}} \\
+\end{equation}
+
+\begin{equation}
+  \boxed { student_{B\:emitted\:30\:minutes} = 310 \pm{18\:particles} \\ }
+\end{equation}
+
+%======================================================================================================================================================
+%\begin{flushleft}
+  \emph{(c) What are the fractional uncertainties? Comment, i.e interpret, the fractional uncertainties.}\\
+
+  Using eq .2.21 from the textbook:
+  $\emph{fractional uncertainty} = \frac {\delta_x} {|{x_{best}}|}$
+  , we can use eq. (1.11) with Students A and B.
+
+  \begin{center}
+  \begin{equation}
+    \emph{fractional uncertainty} = \frac {\delta_\nu} {|{\nu_{best}}|} = \frac { \sqrt {student_{\:particle\:count\:best} }} {student_{\:particle\:count\:best}}
+  \end{equation}
+  \end{center}
+%\end{flushleft}
+
+\begin{equation}
+  student_A_{\:fractional\:uncertainty} = \frac {5} {28} \approx{0.178571428571429}
+\end{equation}
+\begin{equation}
+  student_B_{\:fractional\:uncertainty} = \frac {18} {310} \approx{0.0580645161290323}
+\end{equation}
+
+\begin{subequations}
+\begin{empheq}[box=\widefbox]{align}
+  student_A_{\:fractional\:uncertainty} = 18\% \\
+  student_B_{\:fractional\:uncertainty} = 6\%
+\end{empheq}
+\end{subequations}
+
+Student B's total uncertainty is higher than student A's, however B has a lower fractional uncertainty.
+Counting more events will always reduce your fractional uncertainty in these cases.
+A lower fractional uncertainty implies a more accurate measurement, so B has a better measurement.
+
+\noindent\makebox[\linewidth]{\rule{\linewidth}{1pt}}
+%────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+\section{Problem 2}
+\emph{Most of the ideas of error analysis have important applications in many
+different fields. This applicability is especially true for the square-root rule (3.2)
+for counting experiments, as the following example illustrates. The normal average
+incidence of a certain kind of cancer has been established as 2 cases per 10,000
+people per year. The suspicion has been aired that a certain town (population
+20,000) suffers a high incidence of this cancer because of a nearby chemical dump.
+To test this claim, a reporter investigates the town's records for the past 4 years and
+finds 20 cases of the cancer. He calculates that the expected number is 16 (check
+this) and concludes that the observed rate is 25% more than expected. Is he justified
+in claiming that this result proves that the town has a higher than normal rate for
+this cancer?}\\
+
+\subsection*{\emph{Solution 3.3\\Section 3.2: Abnormal number of cancer cases?}}
+
+\begin{equation}
+  town_{expected\:cases}= 16 \quad town_{actual\:cases} = 20
+\end{equation}
+
+
+\begin{equation}
+\sqrt{town_{actual\:cases} } = \sqrt{20} \approx{4.47213595499958}
+\end{equation}
+\begin{equation}
+\sqrt{town_{actual\:cases} } = \pm{4} \text{ cases}
+\end{equation}
+
+The fewest possible cases are seen by substracting the uncertainty
+$20 - 4 = 16$.
+This is within the expected range, so he is not justified in his claim.
+
+\noindent\makebox[\linewidth]{\rule{\linewidth}{1pt}}
+%────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+\section{Problem 3}
+\emph{Binomial theorem exploration.}
+\subsection*{\emph{Solution 3.8\\Section 3.3: Explore how the binomial theorem works.}}
+
+\begin{equation}
+  ( 1 + x)^n = 1 + nx + \frac{n( n - 1  )} {1 \cdot{ 2}} x^2 + \frac{n( n - 1  ) ( n - 2)} {1 \cdot{2} \cdot{3}} x^3 + ...
+\end{equation}
+
+\emph{(a)}
+
+
+
+$n=2$
+case
+\begin{equation}
+( 1 + x)^2 = 1 + 2x + \frac{2( 2 - 1  )} {1 \cdot{ 2}} x^2 + \frac{2( 2 - 1  ) ( 2 - 2)} {1 \cdot{2} \cdot{3}} x^3 + ...
+\end{equation}
+
+All terms that include $(n-2)$ will cancel; RHS terms to a higher power of x than 2 will go to 0.
+
+\begin{equation}
+( 1 + x)^2 = 1 + 2x + \frac{2( 2 - 1  )} {1 \cdot{ 2}} x^2
+\end{equation}
+
+\begin{equation}
+( 1 + x)^2 = x^2 + 2x + 1
+\end{equation}
+
+\begin{equation}
+( 1 + x)^2 = (x + 1) (x+1)
+\end{equation}
+
+\begin{equation}
+\boxed{( 1 + x)^2 = ( 1 + x)^2}
+\end{equation}
+
+$n=3$
+case
+\begin{equation}
+    ( 1 + x)^n = 1 + nx + \frac{n( n - 1  )} {1 \cdot{ 2}} x^2 + \frac{n( n - 1  ) ( n - 2)} {1 \cdot{2} \cdot{3}} x^3 +  \frac{n(n-1)(n-2)(n-3)} {1\cdot{2}\cdot{3}\cdot{4}} x^4
+    + ...
+\end{equation}
+
+All terms that include $(n-3)$ will cancel; RHS terms to a higher power of x than 3 will go to 0.
+
+\begin{equation}
+    ( 1 + x)^3 = 1 + 3x + \frac{3( 3 - 1  )} {1 \cdot{ 2}} x^2 + \frac{3( 3 - 1  ) ( 3 - 2)} {1 \cdot{2} \cdot{3}} x^3 +  \frac{3(3-1)(3-2)(3-3)} {1\cdot{2}\cdot{3}\cdot{4}} x^4
+    + ...
+\end{equation}
+
+\begin{equation}
+    ( 1 + x)^3 = 1 + 3x + 3 x^2 + x^3
+\end{equation}
+
+\begin{equation}
+    \boxed{( 1 + x)^3 = ( 1 + x)^3}
+\end{equation}
+
+\emph{(b)}
+
+$n=-1$
+case
+\begin{equation}
+  ( 1 + x)^{-1} = 1 + -1x + \frac{-1( -1 - 1  )} {1 \cdot{ 2}} x^2 + \frac{-1( -1 - 1  ) ( -1 - 2)} {1 \cdot{2} \cdot{3}} x^3 + ...
+\end{equation}
+
+\begin{equation}
+  \boxed{( 1 + x)^{-1} = 1 - x + x^2 - x^3 + ...}
+\end{equation}
+
+Now use
+$( 1 + x)^{-1} \approx{1 - x}$
+for
+$x =0.5, 0.1, 0.01$
+and find how much it differs from the exact value.
+
+\begin{equation}
+( 1 + .5)^{-1} \approx{1 - .5}
+\end{equation}
+\begin{equation}
+.67 \approx{.5}
+\end{equation}
+\begin{equation}
+dif. = .67 - .5 = .17
+\end{equation}
+\begin{equation}
+\boxed { percent\:dif = .17 / .67 * 100\% = 25\% }
+\end{equation}
+
+\begin{equation}
+( 1 + .1)^{-1} \approx{1 - .1}
+\end{equation}
+\begin{equation}
+.91 \approx{.9}
+\end{equation}
+\begin{equation}
+dif = .91 - .9 = .01
+\end{equation}
+\begin{equation}
+\boxed { percent\:dif. = .01 / .91 * 100\% = 1\% }
+\end{equation}
+
+\begin{equation}
+( 1 + .01)^{-1} \approx{1 - .01}
+\end{equation}
+\begin{equation}
+.9901 \approx{.99}
+\end{equation}
+\begin{equation}
+dif = .9901  - .99 = .0001
+\end{equation}
+\begin{equation}
+\boxed { percent\:dif. = .0001 / .9901 * 100\% = .01\% }
+\end{equation}
+
+
+\end{document}
