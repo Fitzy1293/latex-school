@@ -1,1 +1,5 @@
 *.test
+*.aux
+*.log
+*.out
+atom_packages
