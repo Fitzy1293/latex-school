@@ -1,3 +1,7 @@
+%QUESTIONS 1, 3, 8, 16, 24, 29, 31, 39, 49 a) only, and 50
+%Start at 79
+%ANSWERS TO CHECK START ON PAGE 304
+
 \documentclass[a4paper, 12pt]{article}
 \usepackage[english]{babel}
 %\usepackage[utf8]{inputenc}
@@ -13,8 +17,19 @@
 \renewcommand{\baselinestretch}{1} %Change between pacing between elements.
 
 \usepackage{amsmath}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+
+
 \numberwithin{equation}{section}
-%───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
                                                   %────────────────┐
                                                   \begin{document}%│
@@ -37,14 +52,15 @@
 
   {\textbf{Student:} \emph{\texttt{Owen Fitzgerald}} \\
   {\textbf{Professor:} \emph{\texttt{Dr. Ward}} \\
-  \LaTeX\textbf{ Path:} \emph{\texttt{HW\_1\_Error\_Analysis\_Owen\_Fitzgerald.tex}} \\
+  \LaTeX\textbf{ File name:} \emph{\texttt{HW\_1\_Error\_Analysis\_Owen\_Fitzgerald.tex}} \\
+  \footnotesize\url{https://github.com/Fitzy1293/latex-school/blob/main/HW_1_Error_Analysis_Owen_Fitzgerald.tex} \\
 
   \noindent\makebox[\linewidth]{\rule{\linewidth}{.4pt}}
 
 \end{flushleft}
 %────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
-%QUESTIONS 1, 3, 8, 16, 24, 29, 31, 39, 49 a) only, and 50
+
 \noindent\makebox[\linewidth]{\rule{\linewidth}{1pt}}
 %────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 \section{Problem 1}
@@ -64,32 +80,68 @@ Comment.}\\
 
 
 \begin{equation}
-  student_{A_{ time}}= 3 \text{ minutes} = 180 \cdot s \quad student_{A_{ \text{ emission rate} }} =  \frac{28}{3} \cdot \frac{particles}{minute}\\
+  student_{A_{ time}}= 3 \text{ minutes} \quad student_{A_{Emitted_{3 minutes}}} = 28 \text{ particles}\\
 \end{equation}
 
 \begin{equation}
-  student_{B_{ time}}= 3 \text{ minutes} = 180 \cdot s \quad student_{B_{ \text{ emission rate} }} =  \frac{300}{3} \cdot \frac{particles}{minute}\\
+  student_{B_{ time}}= 30 \text{ minutes} \quad student_{B_{Emitted_{3 minutes}}} =  310 \text{ particles}\\
 \end{equation}
+
 
 \end{flalign}
 
-\emph{(a)}
+%======================================================================================================================================================
+
+\begin{flushleft}
+  \emph{(a) Student A's measurement}
+  $$$
+  \textrm{Using eq. 3.2 from the textbook:}  $\emph{Avg. events measurement} = \nu \pm{\sqrt{\nu}}$
+  \textrm{ where} $\nu$ \textrm{- the greek letter \emph{nu} - is the best average.}
+
+  $$$
+\end{flushleft}
+
 
 \begin{equation}
-  student_{A_{ \text{ Emitted in 3 minutes} }} = 28\\
+  student_{A_{Emitted_{3 minutes}}} = 28 \text{ particles}\\
 \end{equation}
 
 \begin{equation}
-  student_{A_{ \text{ uncertainty} }} = \sqrt{28} \approx{5.29150262212918...}   \\
+  student_{A_{ \text{ uncertainty} }} = \sqrt{28} \approx{5.29150262212918}   \\
 \end{equation}
+
 \begin{equation}
-  student_{A_{ \text{ uncertainty} }} = \pm{5 particles emmited} \\
+  student_{A_{ \text{ uncertainty} }} = \pm{5 \text{ particles}} \\
+\end{equation}
+
+\begin{equation}
+  \boxed { student_{A_{Emitted_{3 minutes}}} = 28 \pm{5 \text{ particles}} \\ }
+\end{equation}
+%======================================================================================================================================================
+\emph{(b) Student B's measurement}
+
+\begin{equation}
+  student_{B_{Emitted_{30 minutes}}} = 310 \text{ particles}\\
+\end{equation}
+
+\begin{equation}
+  student_{B_{ \text{ uncertainty} }} = \sqrt{310} \approx{17.6068168616590}   \\
+\end{equation}
+
+\begin{equation}
+  student_{B_{ \text{ uncertainty} }} = \pm{18 \text{ particles}} \\
+\end{equation}
+
+\begin{equation}
+  \boxed { student_{B_{Emitted_{30 minutes}}} = 310 \pm{ \text{ 18 particles}} && \\ }
 \end{equation}
 \end{flalign}
+%======================================================================================================================================================
+\begin{flushleft}
+  \emph{(c) What are the fractional uncertainties? Comment, i.e interpret the fractional uncertainties}
+  $$$\textrm{Using eq .2.21 from the textbook:}  && $\text{fractional uncertainty} = \frac {\delta_\alpha} {|{x_{best}}|}$ $$$
+\end{flushleft}
 
 
 \noindent\makebox[\linewidth]{\rule{\linewidth}{1pt}}
-
-
-
 \end{document}
