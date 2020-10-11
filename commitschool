@@ -1,0 +1,3 @@
+#!/bin/env bash
+cd ~/latex-school
+git add . && git commit -m "$1" && git push origin -u main

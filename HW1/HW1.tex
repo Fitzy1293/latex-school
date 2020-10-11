@@ -27,14 +27,18 @@
 }
 
 \urlstyle{same}
-%%%
+
 
 \numberwithin{equation}{section}
 \usepackage{empheq}
 \newcommand*\widefbox[1]{\fbox{\hspace{2em}#1\hspace{2em}}}
+
+\usepackage{parskip}
+
                                                   %────────────────┐
                                                   \begin{document}%│
                                                   %────────────────┘
+
 %────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 %Page header and footer
 \pagestyle{fancy}
@@ -54,7 +58,7 @@
   {\textbf{Student:} \emph{\texttt{Owen Fitzgerald}} \\
   {\textbf{Professor:} \emph{\texttt{Dr. Ward}} \\
   \LaTeX\textbf{ File name:} \emph{HW1.tex}} \\
-  \footnotesize\url{https://github.com/Fitzy1293/latex-school/HW1/blob/main/HW1.tex} \\
+  \footnotesize\url{https://github.com/Fitzy1293/latex-school/blob/main/HW1/HW1.tex} \\
   \footnotesize\url{https://github.com/Fitzy1293/latex-school/blob/main/HW1/HW1.pdf} \\
 
 
@@ -178,7 +182,7 @@ this) and concludes that the observed rate is 25% more than expected. Is he just
 in claiming that this result proves that the town has a higher than normal rate for
 this cancer?}\\
 
-\subsection*{\emph{Solution 3.3\\Section 3.2: Abnormal number of cancer cases?}}
+\subsection*{\emph{Solution 3.3\\Section 3.2: The Square-Root Rule for a Counting Experiment}}
 
 \begin{equation}
   town_{expected\:cases}= 16 \quad town_{actual\:cases} = 20
@@ -200,15 +204,13 @@ This is within the expected range, so he is not justified in his claim.
 %────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 \section{Problem 3}
 \emph{Binomial theorem exploration.}
-\subsection*{\emph{Solution 3.8\\Section 3.3: Explore how the binomial theorem works.}}
+\subsection*{\emph{Solution 3.8\\Section 3.3: Sums and Differences; Products and Quotients}}
 
 \begin{equation}
   ( 1 + x)^n = 1 + nx + \frac{n( n - 1  )} {1 \cdot{ 2}} x^2 + \frac{n( n - 1  ) ( n - 2)} {1 \cdot{2} \cdot{3}} x^3 + ...
 \end{equation}
 
 \emph{(a)}
-
-
 
 $n=2$
 case
@@ -284,7 +286,7 @@ and find how much it differs from the exact value.
 dif. = .67 - .5 = .17
 \end{equation}
 \begin{equation}
-\boxed { percent\:dif = .17 / .67 * 100\% = 25\% }
+\boxed { percent\:error = (.17 / .67) * 100\% = 25\% }
 \end{equation}
 
 \begin{equation}
@@ -297,7 +299,7 @@ dif. = .67 - .5 = .17
 dif = .91 - .9 = .01
 \end{equation}
 \begin{equation}
-\boxed { percent\:dif. = .01 / .91 * 100\% = 1\% }
+\boxed { percent\:error. = (.01 / .91) * 100\% = 1\% }
 \end{equation}
 
 \begin{equation}
@@ -310,8 +312,190 @@ dif = .91 - .9 = .01
 dif = .9901  - .99 = .0001
 \end{equation}
 \begin{equation}
-\boxed { percent\:dif. = .0001 / .9901 * 100\% = .01\% }
+\boxed { percent\:error. = (.0001 / .9901) * 100\% = .01\% }
+\end{equation}
+%────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+\section{Problem 4}
+\emph{A student measures five lengths:
+a = 50 ± 5,
+b
+= 30 ± 3, c = 60 ± 2,
+d
+= 40 ± 1, e = 5.8 ± 0.3
+(all in cm) and calculates the four sums a + b, a + c, a + d, a + e. Assuming the
+original errors were independent and random, find the uncertainties in her four an-
+swers [rule (3.13), "errors add in quadrature"]. If she has reason to think the original
+errors were not independent, what would she have to give for her final uncertainties
+[rule (3.14), "errors add directly"]? Assuming the uncertainties are needed with only
+one significant figure, identify those cases in which the second uncertainty (that in
+b, c, d, e) can be entirely ignored. If you decide to do the additions in quadrature
+on a calculator, note that the conversion from rectangular to polar coordinates auto-matically calculates
+$\sqrt{x^2 + y^2}$ for given x and y.}
+\subsection*{\emph{Solution 3.16\\Section 3.5: Independent Uncertainties in a Sum}}\\
+
+Equation 3.13 in the textbook
+$\delta_q = \sqrt{ {\delta_x}^2 +  {\delta_y}^2 }  $
+gives uncertainty for measurements that have independent and random error.
+
+Equation 3.14 in the textbook
+$\delta_q \approx{\delta_x +  \delta_y } $
+gives a larger uncertainty for when 3.13's conditions aren't met.
+
+
+\begin{equation}
+ \delta_a_b_{\:quad.} = \sqrt{ {\delta_a}^2 +  {\delta_b}^2 } = \sqrt{5^2 + 3^2} = \sqrt{36}
+\end{equation}
+\begin{equation}
+ \delta_a_b_{\:sum} \approx{\delta_a +  \delta_b = 5 + 3}
+\end{equation}
+\begin{subequations}
+\begin{empheq}[box=\widefbox]{align}
+  \delta_a_b_{\:best}= 80\:cm\\
+   \delta_a_b_{\:quad.} = \pm{6}\:cm\\
+   \delta_a_b_{\:sum} = \pm{8}\:cm
+\end{empheq}
+\end{subequations}
+
+
+
+\begin{equation}
+ \delta_a_c_{\:quad.} = \sqrt{ {\delta_a}^2 +  {\delta_c}^2 } = \sqrt{5^2 + 2^2} = \sqrt{29}
+\end{equation}
+\begin{equation}
+ \delta_a_c_{\:sum} \approx{\delta_a +  \delta_c = 5 + 2}
+\end{equation}
+\begin{subequations}
+\begin{empheq}[box=\widefbox]{align}
+  \delta_a_b_{\:best}= 110\:cm\\
+   \delta_a_c_{\:quad.} = \pm{5}\:cm\\
+   \delta_a_c_{\:sum} = \pm{7}\:cm
+\end{empheq}
+\end{subequations}
+
+\begin{equation}
+ \delta_a_d_{\:quad.} = \sqrt{ {\delta_a}^2 +  {\delta_d}^2 } = \sqrt{5^2 + 1^2} = \sqrt{26}
+\end{equation}
+\begin{equation}
+ \delta_a_d_{\:sum} \approx{\delta_a +  \delta_d = 5 + 1}
+\end{equation}
+\begin{subequations}
+\begin{empheq}[box=\widefbox]{align}
+  \delta_a_b_{\:best}= 90\:cm\\
+   \delta_a_d_{\:quad.} = \pm{5}\:cm\\
+   \delta_a_d_{\:sum} = \pm{6}\:cm
+\end{empheq}
+\end{subequations}
+
+
+
+\begin{equation}
+ \delta_a_e_{\:quad.} = \sqrt{ {\delta_a}^2 +  {\delta_e}^2 } = \sqrt{5^2 + 0.3^2} = \sqrt{25.09}
+\end{equation}
+\begin{equation}
+ \delta_a_e_{\:sum} \approx{\delta_a +  \delta_e = 5 + 0.3}
+\end{equation}
+\begin{subequations}
+\begin{empheq}[box=\widefbox]{align}
+  \delta_a_b_{\:best}= 55.8\:cm\\
+   \delta_a_e_{\:quad.} = \pm{5}\:cm\\
+   \delta_a_e_{\:sum} = \pm{5.3}\:cm
+\end{empheq}
+\end{subequations}
+
+There is one equation where you cannot ignore the quadratic uncertainty, $\delta_q = a + b$.
+Both the quadratic and sum uncertainties round to the same thing, for both the positive and negative cases respectively.\\
+The other measurements end up rounding to different things, depending on which uncertainty you use.
+The range of possible measurements differs between the two uncertainties, so the straight sum needs to be used.
+%────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+\section{Problem 5}
+\emph{Charge to mass ratio independet uncertainties}
+
+\subsection*{\emph{Solution 3.24\\Section 3.6: More About Independent Uncertainties}}\\
+
+\emph{(a) Solving for r, electron charge to mass ratio. Include uncertainty.}\\
+
+\begin{equation}
+r = \frac{125}{32 \mu^2_o N^2} \frac{D^2 V}{d^2 I^2}
+\end{equation}
+
+\begin{equation}
+r_{best} = \frac{125}{32 (4 \pi \times 10^{-7} kg \cdot m \cdot s^{-2} \cdot A^{-2}) ^2 (72)^2} \frac{(0.661 \:m)^2 (45.0 \:V)}{(0.0914 \:m)^2 (2.48 \:A)^2}
+\end{equation}
+Changed $\mu_0$ 's from newtons to avoid confusion with N, the coil number.
+
+\begin{equation}
+  r_{best} = 1.83 \times 10^{11} C/kg
 \end{equation}
 
 
+Soolve with  equation 3.18 from the textbook, which explains how to get uncertainties in functions with multiple variables in products and quotients.
+
+\begin{equation}
+\frac {\delta_r}{r_{best}} =
+  \sqrt{
+    {\left( 2 \frac{\delta D}{D} } \right)}^2 +
+    {\left(\frac{\delta V}{V} } \right)}^2 +
+    {\left( 2 \frac{\delta d}{d} } \right)}^2 +
+    {\left( 2 \frac{\delta I}{I} } \right)}^2
+    }
+\end{equation}
+
+\begin{equation}
+\delta_r =
+  r_{best} \cdot \sqrt{
+    {\left( 2 \frac{\delta D}{D} } \right)}^2 +
+    {\left(\frac{\delta V}{V} } \right)}^2 +
+    {\left( 2 \frac{\delta d}{d} } \right)}^2 +
+    {\left( 2 \frac{\delta I}{I} } \right)}^2
+    }
+\end{equation}
+
+\begin{equation}
+\delta_r =
+  1.83 \times 10^{11} \cdot
+  \sqrt{
+    {\left( 2 \frac{0.002}{0.661} } \right)}^2 +
+    {\left(\frac{0.2}{45.0} } \right)}^2 +
+    {\left( 2 \frac{0.0005}{0.0914} } \right)}^2 +
+    {\left( 2 \frac{0.04}{2.48} } \right)}^2
+  }
+  C / kg
+\end{equation}
+
+\begin{equation}
+\delta_r \approx{\pm 6.38 \times 10 ^ 9} C / kg
+\end{equation}
+
+\begin{equation}
+\delta_r = \pm 0.06 \times 10 ^{11} C / kg
+\end{equation}
+
+\begin{equation}
+\boxed { r = 1.83 \times 10^{11} \pm 0.06 \times 10 ^{11} C / kg }
+\end{equation}
+
+\emph{(b) Compare measured value to accepted value.}
+
+\begin{equation}
+percent \: error = \frac{ (1.83 - 1.759) \times 10^{11} }{1.759 \times 10^{11}} * 100\%
+\end{equation}
+
+\begin{equation}
+\boxed {percent \: error = 4\%}
+\end{equation}
+
+This value is in the acceptable range for percent error, so this was a valid recreation of the experiment.
+
+
 \end{document}
+
+\begin{equation}
+
+\end{equation}
+
+
+
+
+%QUESTIONS 1, 3, 8, 16, 24, 29, 31, 39, 49 a) only, and 50
+%Start at 79
+%ANSWERS TO CHECK START ON PAGE 304
